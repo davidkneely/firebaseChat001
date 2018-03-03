@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "657928418102",
+    "firebase_url": "https://fir-chat-android-bb15c.firebaseio.com",
+    "project_id": "fir-chat-android-bb15c",
+    "storage_bucket": "fir-chat-android-bb15c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657928418102:android:ffa8ec5bcff6aa4d",
+        "android_client_info": {
+          "package_name": "com.visionrunner.firebaseChat001"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657928418102-g87d0vokd7ojmdcpqv0chgut0q8r8ass.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAnL_6yfnYFZRh8ZmBw08qAs6bz2abc60"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
