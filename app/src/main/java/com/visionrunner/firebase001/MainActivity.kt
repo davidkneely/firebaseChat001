@@ -7,10 +7,17 @@ import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
-
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_main.*
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+
+    // Write a message to the database
+    val database = FirebaseDatabase.getInstance()
+    val myRef = database.getReference("message")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,16 +36,33 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             textView2.setText(editText.text)
             println("You pressed the button")
-            saveToFirebase()
+            val inputString: String = editText.text.toString()
+            saveToFirebase(inputString)
         }
+
+        // Read from the database
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                val value = dataSnapshot.getValue(String::class.java)
+                println(value)
+//                Log.d(FragmentActivity.TAG, "Value is: " + value!!)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+//                Log.w(FragmentActivity.TAG, "Failed to read value.", error.toException())
+                println("cancelled")
+            }
+        })
     }
 
-    fun saveToFirebase() {
+    fun saveToFirebase(inputString: String) {
+        myRef.setValue(inputString)
+    }
 
-        // Write a message to the database
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("message")
+    fun readFromFirebase() {
 
-        myRef.setValue("Hello, World!")
     }
 }
