@@ -1,4 +1,4 @@
-package com.visionrunner.firebasechat001
+package com.visionrunner.firebase001
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.visionrunner.firebasechat001", appContext.packageName)
+        assertEquals("com.visionrunner.firebase001", appContext.packageName)
     }
 }

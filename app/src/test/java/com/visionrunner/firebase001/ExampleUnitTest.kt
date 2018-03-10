@@ -1,4 +1,4 @@
-package com.visionrunner.firebasechat001
+package com.visionrunner.firebase001
 
 import org.junit.Test
 

@@ -36,6 +36,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657928418102:android:47fc265c7821d282",
+        "android_client_info": {
+          "package_name": "com.visionrunner.firebase001"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657928418102-0dtt98qu1i9ucfil7qiadp2503nljh9n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.visionrunner.firebase001",
+            "certificate_hash": "816432619be864154c56a3d31728feac1ef22a0b"
+          }
+        },
+        {
+          "client_id": "657928418102-g87d0vokd7ojmdcpqv0chgut0q8r8ass.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAnL_6yfnYFZRh8ZmBw08qAs6bz2abc60"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657928418102-g87d0vokd7ojmdcpqv0chgut0q8r8ass.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

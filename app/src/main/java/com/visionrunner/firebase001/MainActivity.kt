@@ -1,14 +1,14 @@
-package com.visionrunner.firebasechat001
+package com.visionrunner.firebase001
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.util.Log
-import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import kotlinx.android.synthetic.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +29,16 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             textView2.setText(editText.text)
             println("You pressed the button")
+            saveToFirebase()
         }
+    }
+
+    fun saveToFirebase() {
+
+        // Write a message to the database
+        val database = FirebaseDatabase.getInstance()
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello, World!")
     }
 }
