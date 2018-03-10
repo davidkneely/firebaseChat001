@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
         button.setText("Submit")
         button.setOnClickListener {
-            textView2.setText(editText.text)
+//            textView2.setText(editText.text)
             println("You pressed the button")
             val inputString: String = editText.text.toString()
             saveToFirebase(inputString)
@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                 // whenever data at this location is updated.
                 val value = dataSnapshot.getValue(String::class.java)
                 println(value)
+                textView2.setText(value)
 //                Log.d(FragmentActivity.TAG, "Value is: " + value!!)
             }
 
