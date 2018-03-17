@@ -8,6 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+=======
+            <option value="$PROJECT_DIR$/app" />
+>>>>>>> 4617595... Saves message to firebase
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

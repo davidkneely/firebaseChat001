@@ -7,4 +7,7 @@
 /build
 /captures
 .externalNativeBuild
+<<<<<<< HEAD
 google-services.json
+=======
+>>>>>>> 4617595... Saves message to firebase
