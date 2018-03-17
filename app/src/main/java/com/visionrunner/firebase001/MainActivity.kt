@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+<<<<<<< HEAD
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ValueEventListener
@@ -18,6 +19,12 @@ class MainActivity : AppCompatActivity() {
     // Write a message to the database
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("message")
+=======
+
+
+
+class MainActivity : AppCompatActivity() {
+>>>>>>> c6498624af36fa681f0a396679a0372634132b82
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
         button.setText("Submit")
         button.setOnClickListener {
+<<<<<<< HEAD
 //            textView2.setText(editText.text)
             println("You pressed the button")
             val inputString: String = editText.text.toString()
@@ -65,5 +73,20 @@ class MainActivity : AppCompatActivity() {
 
     fun readFromFirebase() {
 
+=======
+            textView2.setText(editText.text)
+            println("You pressed the button")
+            saveToFirebase()
+        }
+    }
+
+    fun saveToFirebase() {
+
+        // Write a message to the database
+        val database = FirebaseDatabase.getInstance()
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello, World!")
+>>>>>>> c6498624af36fa681f0a396679a0372634132b82
     }
 }
